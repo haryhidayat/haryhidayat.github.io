@@ -1,0 +1,9 @@
+body {
+  min-height: 2000px;
+}
+
+.jumbotron {
+  /* padding: 2rem 1rem;  ini untuk padding atas bawah dan kiri kanan*/
+  padding-top: 4rem;
+  background-color: #e2edff;
+}

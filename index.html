@@ -8,6 +8,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
 
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
     <!-- My Css -->
     <link rel="stylesheet" href="style.css" />
     <title>My Portofolio | Hary Hidayat</title>
@@ -46,7 +49,7 @@
     <section class="jumbotron text-center">
       <img src="img/hary.JPG" alt="Hary Hidayat" width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Hary Hidayat</h1>
-      <p class="lead">Designer | Teacher | Web Develover | Digital Creator</p>
+      <p class="lead">Teacher | Designer | Web Develover | Digital Creator</p>
 
       <!-- https://getwaves.io/ gambar gelombang dari sini  -->
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -67,11 +70,14 @@
         </div>
         <div class="row justify-content-center fs-5 text-center">
           <!-- justify untuk bbrapa  kolom berada di tenga tengah, fs-5 itu font size, text center ya text nya berada di tengah  -->
-          <div class="col-md-4 mb-3"><p>Selamat datang di website Pelayanan jasa dari Hari hidayat.  Hari Hidayat merupakan seorang pengajar dan praktisi IT di bidangnya, sudah melewati bebagai pelatihan dan pengalaman dalam melayani beberapa kebutuhan jasa seperti desain,design rumah 3D, Instalasi komputer, Problematika software, Percetakan dan kebutuhan digital lainnya.   </p></div>
           <div class="col-md-4 mb-3">
             <p>
-               Beberapa ilustrasi dari pelayanan jasa kami tampilkan dalam gellery di bawah.  Kami siap membantu kebutuhan IT / Desain anda, Segera hubungi kontak kami untuk meraih kemudahan IT bersama kami. 
+              Selamat datang di website Pelayanan jasa dari Hari hidayat. Hari Hidayat merupakan seorang pengajar dan praktisi IT di bidangnya, sudah melewati bebagai pelatihan dan pengalaman dalam melayani beberapa kebutuhan jasa seperti
+              desain,design rumah 3D, Instalasi komputer, Problematika software, Percetakan dan kebutuhan digital lainnya.
             </p>
+          </div>
+          <div class="col-md-4 mb-3">
+            <p>Beberapa ilustrasi dari pelayanan jasa kami tampilkan dalam gellery di bawah. Kami siap membantu kebutuhan IT / Desain anda, Segera hubungi kontak kami untuk meraih kemudahan IT bersama kami.</p>
           </div>
         </div>
       </div>
@@ -94,17 +100,17 @@
           <div class="col mb-3"><h2>Services</h2></div>
         </div>
         <div class="row justify-content-center">
-		        <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3">
             <!-- MB = margin buttom ,, md untuk responsive nama di doc botstrapnya breakpont  nya : -->
             <!-- Gambar gratis Unsplash.com -->
             <div class="card">
               <img src="img/card6.jpg" class="card-img-top" alt="Brosur" />
               <div class="card-body">
-                <p class="card-text">Melayani pembuatan website domain .com .online dll </p>
+                <p class="card-text">Melayani pembuatan website domain .com .online dll</p>
               </div>
             </div>
           </div>
-		  
+
           <div class="col-md-4 mb-3">
             <!-- MB = margin buttom ,, md untuk responsive nama di doc botstrapnya breakpont  nya : -->
             <!-- Gambar gratis Unsplash.com -->
@@ -146,8 +152,8 @@
               </div>
             </div>
           </div>
-		  <div class="col-md-4 mb-3">
-		              <!-- Gambar gratis Unsplash.com  ||| peletakan md ditengah2 untuk responsivenya  -->
+          <div class="col-md-4 mb-3">
+            <!-- Gambar gratis Unsplash.com  ||| peletakan md ditengah2 untuk responsivenya  -->
             <div class="card">
               <img src="img/card5.jpg" class="card-img-top" alt="Brosur" />
               <div class="card-body">
@@ -183,7 +189,9 @@
               <strong>Terimakasih!</strong> Pesan anda sudah kami terima.
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-            <form name="wpu-contact-form">
+
+            <form name="submit-to-google-sheet">
+              <!-- nama form sama dengan yg di script bawah -->
               <div class="mb-3">
                 <label for="name" class="form-label">Nama Lengkap</label>
                 <input type="text" class="form-control" id="name" aria-describedby="name" name="nama" />
@@ -225,5 +233,46 @@
     <!-- <h1 class="text-end text-primary">Hello, world!</h1> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- Script google sheet default  -->
+    <!-- <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbwpp2-RG2FiIRqtqsGS4BS7Gxn76jPM6g_6Mta80EZltQYWPnWFZVkCUNcBg3Q-0xwprA/exec";
+      const form = document.forms["submit-to-google-sheet"]; // ini harus di atas sama na aform
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => console.log("Success!", response))
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script> -->
+
+    <!-- Script google sheet MODIF  -->
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbwpp2-RG2FiIRqtqsGS4BS7Gxn76jPM6g_6Mta80EZltQYWPnWFZVkCUNcBg3Q-0xwprA/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const myAlert = document.querySelector(".my-alert");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // ketika tombol submit diklik
+        // tampilkan tombol loading, hilangkan tombol kirim
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            // tampilkan tombol kirim, hilangkan tombol loading
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
+            // tampilkan alert
+            myAlert.classList.toggle("d-none");
+            // reset formnya
+            form.reset();
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
